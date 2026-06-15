@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['value_0',['value',['../structbstd__string__result.html#ad57ae222bae821e95e7f5c307e53ff0c',1,'bstd_string_result::value'],['../structbstd__strview__result.html#a60d674b0d4de4a69a5a44a6f88871dbe',1,'bstd_strview_result::value']]],
-  ['views_1',['String Views',['../group__strview.html',1,'']]]
+  ['source_0',['source',['../structbstd__strview__split__iter.html#aea731fc9053430d6dc8ee3024be6e92d',1,'bstd_strview_split_iter']]],
+  ['string_20views_1',['String Views',['../group__strview.html',1,'']]],
+  ['string_2ec_2',['string.c',['../string_8c.html',1,'']]],
+  ['string_2eh_3',['string.h',['../string_8h.html',1,'']]],
+  ['strings_4',['Dynamic Strings',['../group__string.html',1,'']]],
+  ['strview_2ec_5',['strview.c',['../strview_8c.html',1,'']]],
+  ['strview_2eh_6',['strview.h',['../strview_8h.html',1,'']]]
 ];

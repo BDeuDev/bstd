@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BSTD: Main Page</title>
+<title>BSTD: BSTD</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,10 +69,62 @@ $(function() {
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">BSTD Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">BSTD </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_mainpage"></a> A lightweight C library for systems programming.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md2"></a>
+Overview</h1>
+<p>BSTD is a minimal C library focused on:</p>
+<ul>
+<li>performance</li>
+<li>predictability</li>
+<li>zero external dependencies</li>
+<li>clean and explicit APIs</li>
+</ul>
+<p>It provides foundational utilities commonly needed in systems-level development.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md4"></a>
+Features</h1>
+<ul>
+<li>Dynamic Strings</li>
+<li>String Views (non-owning slices)</li>
+<li>Vectors</li>
+<li>Error handling utilities</li>
+<li>Result types for explicit error propagation</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md6"></a>
+Example</h1>
+<div class="fragment"><div class="line"><a class="code hl_struct" href="structbstd__string__result.html">bstd_string_result</a> str = <a class="code hl_function" href="group__string.html#ga6efe116cc6b4d80eb394fe10f6bd6086">bstd_string_new</a>(<span class="stringliteral">&quot;Hello BSTD&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (str.<a class="code hl_variable" href="structbstd__string__result.html#a625cc671a8b37957274107933dee618f">ok</a>)</div>
+<div class="line">{</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%s\n&quot;</span>, str.<a class="code hl_variable" href="structbstd__string__result.html#ad57ae222bae821e95e7f5c307e53ff0c">value</a>.<a class="code hl_variable" href="structbstd__string.html#a26223ae410b1b79cf02dc035fea70add">data</a>);</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__string_html_ga6efe116cc6b4d80eb394fe10f6bd6086"><div class="ttname"><a href="group__string.html#ga6efe116cc6b4d80eb394fe10f6bd6086">bstd_string_new</a></div><div class="ttdeci">bstd_string_result bstd_string_new(char *cstr)</div><div class="ttdoc">Creates a new dynamic string.</div><div class="ttdef"><b>Definition</b> string.c:10</div></div>
+<div class="ttc" id="astructbstd__string__result_html"><div class="ttname"><a href="structbstd__string__result.html">bstd_string_result</a></div><div class="ttdef"><b>Definition</b> string.h:30</div></div>
+<div class="ttc" id="astructbstd__string__result_html_a625cc671a8b37957274107933dee618f"><div class="ttname"><a href="structbstd__string__result.html#a625cc671a8b37957274107933dee618f">bstd_string_result::ok</a></div><div class="ttdeci">bool ok</div><div class="ttdef"><b>Definition</b> string.h:31</div></div>
+<div class="ttc" id="astructbstd__string__result_html_ad57ae222bae821e95e7f5c307e53ff0c"><div class="ttname"><a href="structbstd__string__result.html#ad57ae222bae821e95e7f5c307e53ff0c">bstd_string_result::value</a></div><div class="ttdeci">bstd_string value</div><div class="ttdef"><b>Definition</b> string.h:34</div></div>
+<div class="ttc" id="astructbstd__string_html_a26223ae410b1b79cf02dc035fea70add"><div class="ttname"><a href="structbstd__string.html#a26223ae410b1b79cf02dc035fea70add">bstd_string::data</a></div><div class="ttdeci">char * data</div><div class="ttdef"><b>Definition</b> string.h:24</div></div>
+</div><!-- fragment --><hr  />
+<h1><a class="anchor" id="autotoc_md8"></a>
+Modules</h1>
+<ul>
+<li><code><a class="el" href="string_8h.html" title="Dynamic string implementation.">string.h</a></code> – dynamic string implementation</li>
+<li><code><a class="el" href="strview_8h.html" title="Non-owning string slices.">strview.h</a></code> – zero-copy string views</li>
+<li><code>vec.h</code> – dynamic arrays</li>
+<li><code>stack.h</code> – stack utilities</li>
+<li><code><a class="el" href="error_8h.html">error.h</a></code> – error handling</li>
+<li><code><a class="el" href="result_8h.html">result.h</a></code> – result types</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md10"></a>
+Documentation</h1>
+<p>Full API reference is available in the generated documentation. </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

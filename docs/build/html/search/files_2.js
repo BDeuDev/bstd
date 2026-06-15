@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['string_2ec_0',['string.c',['../string_8c.html',1,'']]],
-  ['string_2eh_1',['string.h',['../string_8h.html',1,'']]],
-  ['strview_2ec_2',['strview.c',['../strview_8c.html',1,'']]],
-  ['strview_2eh_3',['strview.h',['../strview_8h.html',1,'']]]
+  ['result_2eh_0',['result.h',['../result_8h.html',1,'']]]
 ];
