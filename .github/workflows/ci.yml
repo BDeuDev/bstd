@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  release:
+    types: [published]
+
+jobs:
+  build-test-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            gcc \
+            make \
+            clang-format \
+            doxygen \
+            graphviz
+
+      - name: Check formatting
+        run: make format-check
+
+      - name: Build tests
+        run: make tests
+
+      - name: Run tests
+        run: make test
+
+      - name: Generate docs (Doxygen)
+        run: |
+          cd docs
+          doxygen Doxyfile
+
+      - name: Upload docs artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/build/html
+
+
+  deploy-pages:
+    needs: build-test-docs
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

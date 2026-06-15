@@ -1,0 +1,29 @@
+#!/bin/sh
+
+echo "================================="
+echo "Running formatter..."
+echo "================================="
+
+make format
+
+if [ $? -ne 0 ]; then
+    echo "Formatting failed."
+    exit 1
+fi
+
+echo ""
+echo "================================="
+echo "Running tests..."
+echo "================================="
+
+make test
+
+if [ $? -ne 0 ]; then
+    echo "Tests failed."
+    exit 1
+fi
+
+echo ""
+echo "================================="
+echo "Pre-commit checks passed"
+echo "================================="
