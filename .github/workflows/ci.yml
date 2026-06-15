@@ -24,14 +24,22 @@ jobs:
             doxygen \
             graphviz
 
-      - name: Check formatting
-        run: make format-check
+      - name: Format check
+        run: make format
+
+      - name: Clean build
+        run: make clean
 
       - name: Build tests
         run: make tests
 
+      - name: Verify test binary exists
+        run: |
+          ls -la
+          test -f tests_runner || (echo "tests_runner not found" && exit 1)
+
       - name: Run tests
-        run: make test
+        run: ./tests_runner
 
       - name: Generate docs (Doxygen)
         run: |
@@ -42,7 +50,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/build/html
-
 
   deploy-pages:
     needs: build-test-docs
