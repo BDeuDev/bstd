@@ -4,6 +4,11 @@
  * @{
  */
 
+/**
+ * @file strview.h
+ * @brief Non-owning string slices.
+ */
+
 #ifndef BSTD_STRVIEW_H
 #define BSTD_STRVIEW_H
 
